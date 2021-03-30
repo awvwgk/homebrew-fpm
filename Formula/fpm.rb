@@ -1,8 +1,8 @@
 class Fpm < Formula
   desc "Fortran Package Manager (fpm)"
   homepage "https://fpm.fortran-lang.org"
-  url "https://github.com/fortran-lang/fpm/releases/download/v0.1.4/fpm-0.1.4.f90"
-  sha256 "06c139b16cf871e06cd3ea3be93c1ddbb5a94e4546a0c64822d10dc87333ac0c"
+  url "https://github.com/fortran-lang/fpm/releases/download/v0.2.0/fpm-0.2.0.f90"
+  sha256 "79d5041f5cebd1adff999017b3b5f88d8814267dbd0faaa0f7c720411ede463e"
   license "MIT"
 
   depends_on "gcc" # for gfortran
@@ -15,7 +15,7 @@ class Fpm < Formula
     # ENV.fc is not defined and setting it up with ENV.fortran will yield default gfortran
     ENV["FC"] = ENV.cc.gsub /gcc/, "gfortran"
     # Compile arguments need some tweaking
-    system ENV["FC"], "fpm-0.1.4.f90", "-o", "fpm"
+    system ENV["FC"], "fpm-0.2.0.f90", "-o", "fpm"
     bin.install "fpm"
   end
 
