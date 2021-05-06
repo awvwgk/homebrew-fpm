@@ -6,16 +6,17 @@ class Fpm < Formula
   license "MIT"
 
   depends_on "gcc" # for gfortran
-  fails_with :gcc => "4"
-  fails_with :gcc => "5"
-  fails_with :gcc => "6"
+  fails_with gcc: "4"
+  fails_with gcc: "5"
+  fails_with gcc: "6"
   fails_with :clang
 
   def install
     # ENV.fc is not defined and setting it up with ENV.fortran will yield default gfortran
-    ENV["FC"] = ENV.cc.gsub /gcc/, "gfortran"
+    fc = ENV.cc.gsub(/gcc/, "gfortran")
+    fflags = ["-g", "-fbacktrace", "-O3"]
     # Compile arguments need some tweaking
-    system ENV["FC"], "fpm-0.2.0.f90", "-o", "fpm"
+    system fc, *fflags, "fpm-0.2.0.f90", "-o", "fpm"
     bin.install "fpm"
   end
 
