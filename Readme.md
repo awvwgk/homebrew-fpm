@@ -11,4 +11,4 @@ brew install fpm
 
 ## License
 
-The package build files are available under a BSD-3-Clause license.
+The package build files are available under a BSD-2-Clause license.
