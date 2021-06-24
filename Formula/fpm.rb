@@ -1,8 +1,8 @@
 class Fpm < Formula
   desc "Fortran Package Manager (fpm)"
   homepage "https://fpm.fortran-lang.org"
-  url "https://github.com/fortran-lang/fpm/releases/download/v0.2.0/fpm-0.2.0.f90"
-  sha256 "79d5041f5cebd1adff999017b3b5f88d8814267dbd0faaa0f7c720411ede463e"
+  url "https://github.com/fortran-lang/fpm/releases/download/v0.3.0/fpm-0.3.0.F90"
+  sha256 "a0670253a27a8b3745e694279d1c5feacbb111a932537c5932edde0c0f3ffa8b"
   license "MIT"
 
   bottle do
@@ -22,7 +22,7 @@ class Fpm < Formula
     fc = ENV.cc.gsub(/gcc/, "gfortran")
     fflags = ["-g", "-fbacktrace", "-O3"]
     # Compile arguments need some tweaking
-    system fc, *fflags, "fpm-0.2.0.f90", "-o", "fpm"
+    system fc, *fflags, "fpm-0.3.0.F90", "-o", "fpm"
     bin.install "fpm"
   end
 
