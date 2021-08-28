@@ -6,8 +6,8 @@ class Fpm < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/awvwgk/homebrew-fpm/releases/download/fpm-0.3.0"
-    sha256 cellar: :any, catalina: "eff695480a2406e2af14146000812467ce561cab465eeb848292372b672be1a7"
+    root_url "https://github.com/awvwgk/homebrew-fpm/releases/download/fpm-0.4.0"
+    sha256 cellar: :any, catalina: "3f39ca08f36badaf46b18e2e5f21909efe7cb49554f0d1aef52a21a076bf1887"
   end
 
   depends_on "curl" => :build
