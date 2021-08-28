@@ -1,8 +1,8 @@
 class Fpm < Formula
   desc "Fortran Package Manager (fpm)"
   homepage "https://fpm.fortran-lang.org"
-  url "https://github.com/fortran-lang/fpm/releases/download/v0.3.0/fpm-0.3.0.F90"
-  sha256 "a0670253a27a8b3745e694279d1c5feacbb111a932537c5932edde0c0f3ffa8b"
+  url "https://github.com/fortran-lang/fpm/archive/refs/tags/v0.4.0.tar.gz"
+  sha256 "6c1574273164f859591547b7aae3b2d39471cf8a1d901cf1e453e607fbe9757a"
   license "MIT"
 
   bottle do
@@ -10,6 +10,7 @@ class Fpm < Formula
     sha256 cellar: :any, catalina: "eff695480a2406e2af14146000812467ce561cab465eeb848292372b672be1a7"
   end
 
+  depends_on "curl" => :build
   depends_on "gcc" # for gfortran
   fails_with gcc: "4"
   fails_with gcc: "5"
@@ -18,11 +19,9 @@ class Fpm < Formula
 
   def install
     # ENV.fc is not defined and setting it up with ENV.fortran will yield default gfortran
-    fc = ENV.cc.gsub(/gcc/, "gfortran")
-    fflags = ["-g", "-fbacktrace", "-O3"]
+    ENV["FC"] = ENV.cc.gsub(/gcc/, "gfortran")
     # Compile arguments need some tweaking
-    system fc, *fflags, "fpm-0.3.0.F90", "-o", "fpm"
-    bin.install "fpm"
+    system "./install.sh", "--prefix=#{prefix}"
   end
 
   test do
