@@ -2,21 +2,12 @@ class Ford < Formula
   include Language::Python::Virtualenv
 
   desc "Automatic documentation generator for modern Fortran programs"
-  homepage "https://github.com/cmacmackin/ford/"
-  url "https://github.com/cmacmackin/ford/archive/v6.0.0.tar.gz"
-  sha256 "45fd53c7e5263fea2e751c436de6a1513d250647e98e32668b9965677974309e"
+  homepage "https://github.com/Fortran-FOSS-Programmers/ford/"
+  url "https://github.com/Fortran-FOSS-Programmers/ford/archive/v6.1.2.tar.gz"
+  sha256 "60479f4bc5cc72d012dac22ae7e3a35d1dafa0bb65383f1fd5cc8f9414156dc9"
   license "GPL-3.0"
-  revision 3
-  head "https://github.com/cmacmackin/ford.git"
-
-  bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "004dc7234aa36e6fb9fab6c0ba7330a8df69edaa4e0eab9279e9c2dc5a76cb5e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "9aab668aebf8641782123a24d00dc367e0f41e21dfabc05cfbd82ed4e3a402f0"
-    sha256 cellar: :any_skip_relocation, catalina:      "1d645364d5ef8813745637cc83089a521306e319104eeccca786af71c3b937e8"
-    sha256 cellar: :any_skip_relocation, mojave:        "0779dbcb80b7076526778d04d0ee35346973a34b5bc1eb945d26e0fe1c2beac3"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "3a4005e1f83a4c86dfde8adc54ef2e0bf592c347020e56b26e961cc71b88bf44"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "65412ed98b02e2db55e1b732a86d58f3272fa454129409fd5321c946fca6463f"
-  end
+  revision 1
+  head "https://github.com/Fortran-FOSS-Programmers/ford.git"
 
   depends_on "graphviz"
   depends_on "python@3.9"
