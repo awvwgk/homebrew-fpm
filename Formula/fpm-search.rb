@@ -5,6 +5,12 @@ class FpmSearch < Formula
   sha256 "1f60212171119454970ee84af7554b762946fbaffc0cff8186c50378e4e64276"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/awvwgk/homebrew-fpm/releases/download/fpm-search-0.18.0"
+    sha256 cellar: :any, big_sur:  "0604372deca21d2ad8861ad2e24307ae6456b22b1a7e7c4b6d602b1db349adbd"
+    sha256 cellar: :any, catalina: "e29a8340bb467c130595e31907467f304570b310bf467a68b3b7b2a23ce682dc"
+  end
+
   depends_on "curl"
   depends_on "fpm"
   depends_on "gcc" # for gfortran
