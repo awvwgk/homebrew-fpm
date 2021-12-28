@@ -14,7 +14,8 @@ class Fypp < Formula
     sha256 cellar: :any_skip_relocation, catalina: "0e130c3e46041ef6efe8cbbbbf21b1cd80f21aac2f4901489702e2fd1ea32719"
   end
 
-  depends_on "python"
+  depends_on "gcc" => :test
+  depends_on "python@3.9"
 
   def install
     virtualenv_install_with_resources
@@ -22,5 +23,16 @@ class Fypp < Formula
 
   test do
     system "#{bin}/fypp", "--version"
+    (testpath/"hello.F90").write <<~EOS
+      program hello
+      #:for val in [_SYSTEM_, _MACHINE_, _FILE_, _LINE_]
+        print *, '${val}$'
+      #:endfor
+      end
+    EOS
+    system "#{bin}/fypp", testpath/"hello.F90", testpath/"hello.f90"
+    ENV.fortran
+    system ENV.fc, testpath/"hello.f90", "-o", testpath/"hello"
+    system testpath/"hello"
   end
 end
