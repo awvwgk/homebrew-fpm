@@ -9,6 +9,13 @@ brew tap awvwgk/fpm
 brew install fpm
 ```
 
+Some additional packages are provided as well
+
+- [`fpm-search`](https://github.com/brocolis/fpm-search): List available packages in the fpm-registry
+- [`fypp`](https://fypp.readthedocs.org): Python powered Fortran preprocessor
+- [`lfortran`](https://lfortran.org): Modern interactive LLVM-based Fortran compiler
+
+
 ## License
 
 The package build files are available under a BSD-2-Clause license.
