@@ -7,9 +7,9 @@ class Lfortran < Formula
   revision 1
 
   bottle do
-    root_url "https://github.com/awvwgk/homebrew-fpm/releases/download/lfortran-0.14.0"
-    sha256 cellar: :any, big_sur:  "62887d014d1dce8cda6ed56bea8e99944b192c34fb686699f307771379c6a277"
-    sha256 cellar: :any, catalina: "61755f1a198de4096d715c507a3845a76e94f0dcbaf9674c4418edde6494128e"
+    root_url "https://github.com/awvwgk/homebrew-fpm/releases/download/lfortran-0.14.0_1"
+    sha256 cellar: :any, big_sur:  "e05cfad4c21c3dca5308ff7eb0e689c2479114b89550b054f954c8a06c18e777"
+    sha256 cellar: :any, catalina: "b6522d92bd8d861aad0146cf5076db90208bd2670ecf5c8bb62d809211db1b8d"
   end
 
   depends_on "cmake" => :build
