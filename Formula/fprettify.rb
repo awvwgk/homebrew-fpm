@@ -8,6 +8,12 @@ class Fprettify < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/pseewald/fprettify.git", branch: "master"
 
+  bottle do
+    root_url "https://github.com/awvwgk/homebrew-fpm/releases/download/fprettify-0.3.7"
+    sha256 cellar: :any_skip_relocation, big_sur:  "96da0ab049aacafda105975716d8597a72ea8396263ef17c18f9e4ad2ca1522a"
+    sha256 cellar: :any_skip_relocation, catalina: "bad789ca57cb824dec04d72a86285f5268d36fe1ba57241d87a3e1043c67e95d"
+  end
+
   depends_on "gcc" => :test
   depends_on "python"
 
