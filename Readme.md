@@ -12,7 +12,8 @@ brew install fpm
 Some additional packages are provided as well
 
 - [`fpm-search`](https://github.com/brocolis/fpm-search): List available packages in the fpm-registry
-- [`fypp`](https://fypp.readthedocs.org): Python powered Fortran preprocessor
+- [`fprettify`](https://github.com/pseewald/fprettify): Auto-formatter for modern fortran source code
+- [`fypp`](https://fypp.readthedocs.org): Python powered Fortran preprocessor (available in [homebrew/core](https://formulae.brew.sh/formula/fypp))
 - [`lfortran`](https://lfortran.org): Modern interactive LLVM-based Fortran compiler
 
 
