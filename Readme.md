@@ -11,6 +11,7 @@ brew install fpm
 
 Some additional packages are provided as well
 
+- [`findent`](https://sourceforge.net/projects/findent/): Indents/beautifies/converts Fortran sources
 - [`fpm-search`](https://github.com/brocolis/fpm-search): List available packages in the fpm-registry
 - [`fypp`](https://fypp.readthedocs.org): Python powered Fortran preprocessor
 - [`lfortran`](https://lfortran.org): Modern interactive LLVM-based Fortran compiler
