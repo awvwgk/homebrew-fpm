@@ -1,6 +1,6 @@
 # Brew formula for the Fortran package manager
 
-**Note: this project has been migrated to [`fortran-lang/homebrew-fortran`](https://github.com/fortran-lang/homebrew-fpm).** 
+**Note: this project has been migrated to [`fortran-lang/homebrew-fortran`](https://github.com/fortran-lang/homebrew-fortran).** 
 
 This repository provides package build instructions for the Fortran package manager ([fpm](https://github.com/fortran-lang/fpm)) compatible with the [Homebrew toolchain](https://brew.sh).
 
